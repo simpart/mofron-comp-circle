@@ -1,5 +1,5 @@
-<require>
+<setting>
     <tag load="mofron-comp-circle">Circle</tag>
-</require>
+</setting>
 
 <Circle size=1.5rem color="#f0e6fa"></Circle>
