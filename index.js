@@ -17,7 +17,7 @@ module.exports = class extends Frame {
     constructor (prm) {
         try {
             super();
-            this.name("Circle");
+            this.modname("Circle");
             
             /* set config */
 	    if (undefined !== prm) {
@@ -27,6 +27,11 @@ module.exports = class extends Frame {
             console.error(e.stack);
             throw e;
         }
+    }
+
+    initDomConts () {
+        super.initDomConts();
+	this.style({ 'border-width': '0rem' }, { lock:true });
     }
     
     /**
@@ -65,7 +70,7 @@ module.exports = class extends Frame {
                 return ret;
 	    }
 	    let siz = comutl.getsize(prm);
-	    siz.value(siz.value()/2);
+	    siz.value((siz.value()+0.02)/2);
             this.radius(siz.toString());
 	} catch (e) {
             console.error(e.stack);
@@ -88,7 +93,7 @@ module.exports = class extends Frame {
                 return ret;
 	    }
 	    let siz = comutl.getsize(prm);
-	    siz.value(siz.value()/2);
+	    siz.value((siz.value()+0.02)/2);
 	    this.radius(siz.toString());
 	} catch (e) {
             console.error(e.stack);
